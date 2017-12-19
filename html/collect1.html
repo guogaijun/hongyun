@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>收藏1</title>
+		<link rel="stylesheet" href="../css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="../css/top.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/swiper.min.css">
+		<script src="../js/auto-size.js"></script>
+		<script src="../js/jquery-3.2.1.js"></script>
+		<script src="../js/swiper-3.4.2.jquery.min.js"></script>
+		<style type="text/css">
+			body{
+				background: #FCF5EB;
+			}
+			img{
+				width: 100%;
+				height: 100%;
+			}
+			tit {
+			  width: 7.5rem;
+			  height: 1.05rem;
+			  position: relative;
+			}
+			.tit .tit-link {
+			  width: 1rem;
+			  height: 1rem;
+			  background: url(../img/custom/custom-index/arrow.png) center no-repeat;
+			  background-size: .2rem .36rem;
+			  position: absolute;
+			  left: .23rem;
+			  top: .365rem;
+			}
+			.tit h1 {
+			  font-size: .36rem;
+			  color: #333;
+			  font-weight: bold;
+			  text-align: center;
+			  line-height: 1.15rem;
+			  padding-top: .05rem;
+			}
+			.txt1,.txt2{
+				width: 7.5rem;
+				height: 2rem;
+				
+			}
+			.txt1{
+				background: url(../img/collect/img1.png) center no-repeat;
+			  	background-size: cover;
+			}
+			.txt2{
+				background: url(../img/collect/img2.png) center no-repeat;
+			  	background-size: cover;
+			}
+			#cont{
+				margin-top: .3rem;
+			}
+			.delete{
+			    width: 1.32rem;
+			    height:2rem;
+			}
+			.swiper-slide {
+			    text-align: center;
+			    font-size: 18px;
+			    background: #fff;
+			    /* Center slide text vertically */
+			    display: -webkit-box;
+			    display: -ms-flexbox;
+			    display: -webkit-flex;
+			    display: flex;
+			    -webkit-box-pack: center;
+			    -ms-flex-pack: center;
+			    -webkit-justify-content: center;
+			    justify-content: center;
+			    -webkit-box-align: center;
+			    -ms-flex-align: center;
+			    -webkit-align-items: center;
+			    align-items: center;
+			}
+			#slide1,#slide2{
+			    width: 1.32rem;
+			    height:2rem;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="header"></div>
+		<div class="tit">
+	   		<h1>收藏</h1>
+	   		<div class="tit-link"></div>
+	   	</div>
+	   	<div class="swiper-container">
+       		<div class="swiper-wrapper">
+       			<div class="swiper-slide">
+					<a href="detail.html"><div class="txt1"></div></a>
+       			</div>
+       			<div class="swiper-slide" id="slide1">
+					<img src="../img/cart/delete.png" class="delete">
+       			</div>
+       		</div>
+       	</div>
+	   	<div class="swiper-container" id="cont">
+       		<div class="swiper-wrapper">
+       			<div class="swiper-slide">
+					<a href="detail.html"><div class="txt2"></div></a>
+       			</div>
+       			<div class="swiper-slide" id="slide2">
+					<img src="../img/cart/delete.png" class="delete">
+       			</div>
+       		</div>
+       	</div>
+	   	
+	   	
+	</body>
+		<script type="text/javascript">
+			$(function(){
+				var mySwiper = new Swiper ('.swiper-container', {
+		    		direction: 'horizontal',
+		    		slidesPerView: 'auto',
+		    		spaceBetween: 0,
+		    		resistanceRatio: 0,
+		    	})
+				$(".tit-link").click(function(){
+					history.back();
+				})
+				
+				var num=$(".swiper-container").length;
+				$("#slide1,#slide2").click(function(){
+					$(this).closest(".swiper-container").remove();
+					num--;
+					if(num==0){
+						window.location.assign("collect2.html");
+					}
+				})
+			})
+		</script>
+</html>

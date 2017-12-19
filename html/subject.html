@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>专题页</title>
+		<link rel="stylesheet" href="../css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="../css/top.css"/>
+		<script src="../js/auto-size.js"></script>
+		<script src="../js/jquery-3.2.1.js"></script>
+		<style type="text/css">
+			.content{
+				width: 7.5rem;
+				height: 64.67rem;
+				background: url(../img/subject/subject.png)center no-repeat;
+				background-size: cover;
+				position: relative;
+			}
+			#hea{
+			    position: fixed;
+			}
+			.tit{
+		       width: 7.5rem;
+		       height: 1.05rem; 
+		       position: relative;
+		       z-index: 999;  
+		    }
+		    .tit-link{
+	           width: 1rem;
+	           height: 1rem;
+	           background: url(../img/custom/custom-index/arrow.png)center no-repeat;
+	           background-size: .2rem .36rem;
+	           position: absolute;
+	           left:.23rem;
+	           top:.45rem;
+	       }
+		       .tit-add{
+	           width: 1rem;
+	           height: 1rem;
+	           background: url(../img/custom/custom-settle/more.png)center no-repeat;
+	           background-size: .4rem .4rem;
+	           position: absolute;
+	           right:.23rem;
+	           top:.45rem;
+	       }
+		</style>
+	</head>
+	<body>
+		<div class="header" id="hea"></div>
+		<div class="content">
+			<div class="tit">
+		   		<div class="tit-link"></div>
+		   		<div class="tit-add"></div>
+		   	</div>
+		</div>
+	</body>
+<script type="text/javascript">
+	$(function(){
+			$(".tit-link").click(function(){
+				history.back();
+			})
+		})
+</script>
+</html>

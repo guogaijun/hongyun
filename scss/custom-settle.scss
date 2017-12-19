@@ -1,0 +1,199 @@
+@charset "UTF-8";
+*{
+    margin:0 auto ;
+    padding: 0;
+}
+body{
+  background: #fcf5eb;
+  width: 7.5rem;
+}
+img{
+    width:100%;
+    height: 100%;
+}
+#hea{
+    position: fixed;
+}
+.container{
+    width: 7.5rem;
+    height: 10.3rem;
+    background: url(../img/custom/custom-settle/back.png)center no-repeat;
+    background-size:cover;
+}
+.content{
+    width: 7.5rem;
+    margin-top: .35rem;
+    position: absolute;
+}
+.tit{
+   width: 7.5rem;
+   height: 1.05rem; 
+   position: relative;
+   .tit-link{
+       width: 1rem;
+       height: 1rem;
+       background: url(../img/custom/custom-index/arrow.png)center no-repeat;
+       background-size: .2rem .36rem;
+       position: absolute;
+       left:.23rem;
+       top:.025rem;
+   }
+   .tit-add{
+       width: 1rem;
+       height: 1rem;
+       background: url(../img/custom/custom-settle/more.png)center no-repeat;
+       background-size: .4rem .4rem;
+       position: absolute;
+       right:.23rem;
+       top:.025rem;
+   }
+   h1{
+       font-size: .36rem;
+       color: #333;
+       font-weight: bold;
+       text-align: center;
+       line-height: 1.05rem;
+   }
+}
+.recom{
+    width: 6.2rem;
+    position: relative;
+    margin-top: .3rem;
+    .cycle{
+        width: 6.2rem;
+        height: 8rem;
+        margin-bottom: .7rem;
+        background: url(../img/custom/custom-settle/rectangle.png)center no-repeat;
+        background-size: cover;
+        position: relative;
+        .cycle-top{
+            width: 6.2rem;
+            height: 4.8rem;
+            background: url(../img/custom/custom-settle/cloth.png)1rem center no-repeat;
+            background-size: 1.36rem 4.04rem;
+            overflow: hidden;
+            h1{
+                font-size: .26rem;
+                color: #333;
+                margin-top: 1.9rem;
+                margin-left: 2.7rem;
+            }
+            p{
+                font-size: .24rem;
+                color: #333;
+                margin-left: 2.7rem;
+            }
+            hr{
+                margin: .22rem 0 .33rem 2.7rem;
+                width: 1.24rem;
+            }
+        }
+        .cycle-bottom{
+            width: 6.2rem;
+            height: 3.2rem;
+            background: url(../img/custom/custom-settle/information.png)center top no-repeat;
+            background-size: 4.6rem 2rem;
+            overflow: hidden;
+            .help-icon{
+                width: .32rem;
+                height: .32rem;
+                background: url(../img/custom/custom-select/question.png)center no-repeat;
+                background-size:cover;
+                margin-right: .2rem;
+                margin-top: .1rem;
+            }
+            h2{
+                font-size: .36rem;
+                color: #333;
+                text-align: right;
+                padding-right: .75rem;
+                margin-top: 2.1rem;
+                span{
+                    font-size: .4rem;
+                    color: #A31515;
+                    
+                }
+            }
+        }
+    }
+}
+h1{
+    font-size: .5rem;
+    color: #333;
+    text-align: right;
+    padding-right: .75rem;
+    margin-top: .3rem;
+    span{
+        font-size: .5rem;
+        color: #A31515;
+        
+    }
+}
+p{
+    font-size: .3rem;
+    color: #333;
+    text-align: right;
+    padding-right: 2rem;
+}
+.bottom-btns{
+    position: fixed;
+    bottom: 0;
+    width: 7.5rem;
+    height: 1rem;
+    .care{
+        width: 1rem;
+        height: 1rem;
+        position: absolute;
+        left: .43rem;
+        background: url(../img/custom/custom-settle/care.png)center no-repeat;
+        background-size:.65rem .8rem;
+    }
+    .shopp{
+        width: 1rem;
+        height: 1rem;
+        position: absolute;
+        left: 1.7rem;
+        background: url(../img/custom/custom-settle/shopping.png)center no-repeat;
+        background-size:.65rem .8rem;
+    }
+    .add{
+        width: 2.18rem;
+        height: 1rem;
+        position: absolute;
+        right:2.16rem;
+        background: url(../img/custom/custom-settle/addtobag.png)center no-repeat;
+        background-size:cover;
+    }
+    .payfor{
+        width: 2.16rem;
+        height: 1rem;
+        position: absolute;
+        right:0rem;
+        background: url(../img/custom/custom-settle/settlement.png)center no-repeat;
+        background-size:cover;
+    }
+}
+#more2{
+    width: 1.9rem;
+    height: 2.58rem;
+    position: absolute;
+    right:0rem;
+    top: -.4rem;
+    background: url(../img/custom/custom-settle/more2.png)center no-repeat;
+    background-size:cover;
+    display: none;
+    .more2-link{
+        width: 1.5rem;
+        height: .8rem;
+        margin-top: .16rem;
+    }
+}
+
+
+
+
+
+
+
+
+

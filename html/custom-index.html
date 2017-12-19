@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>定制首页</title>
+		<link rel="stylesheet" type="text/css" href="../css/custom-index.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/swiper.min.css">
+		<link rel="stylesheet" href="../css/top.css" />
+	    <script src="../js/jquery-3.2.1.min.js"></script>
+	    <script src="../js/swiper-3.4.2.jquery.min.js"></script>
+		<script src="../js/auto-size.js"></script>
+		<script src="../js/infinite-custom.js"></script>
+	</head>
+	<body>
+		<!--头部-->
+	    <div class="header" id="hea"></div>
+	   	<!--标题栏-->
+	   	<div class="content">
+	   		<div class="tit">
+		   		<h1>红韵定制</h1>
+		   		<div class="tit-link"></div>
+		   	</div>
+		   	<div class="recom">
+	       		<!--定制流程图-->
+	       		<div class="cycle">
+	       			<div>
+	       				<img src="../img/custom/custom-index/procedure.png"/>
+	       				<div class="help-icon"></div>
+	       			</div>
+	       		</div>
+	       		<div class="hr-left hr"></div>
+	       		<h1>定制欣赏</h1>
+	       		<div class="hr-right hr"></div>
+	       		<!--无限下拉-->
+	       		<div class="cycle2">
+       				<a href="detail.html"><div class="cus1"></div></a>
+	       			<a href="detail.html"><div class="cus2"></div></a>
+	       		</div>
+	       	</div>
+		</div>
+		<a href="custom-measure.html"><div class="cus-btn"></div></a>
+	</body>
+	<script>
+		$(function(){
+			isScrollToPageBottom();
+			watchScroll();
+			$(".tit-link").click(function(){
+				history.back();
+			})
+		})
+	</script>
+	
+</html>

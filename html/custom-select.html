@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>选料定歀</title>
+		<link rel="stylesheet" type="text/css" href="../css/custom-select.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/swiper.min.css">
+		<link rel="stylesheet" href="../css/top.css" />
+	    <script src="../js/jquery-3.2.1.min.js"></script>
+	    <script src="../js/swiper-3.4.2.jquery.min.js"></script>
+		<script src="../js/auto-size.js"></script>
+	</head>
+	<body>
+		<!--头部-->
+	    <div class="header" id="hea"></div>
+	   	<div class="content">
+	   		<!--标题栏-->
+	   		<div class="tit">
+		   		<h1>选料定歀</h1>
+		   		<div class="tit-link"></div>
+		   	</div>
+		   	<div class="recom">
+	       		<div class="hr-left hr"></div>
+	       		<h1>选料定歀</h1>
+	       		<div class="hr-right hr"></div>
+	       		<!--选料定歀-->
+	       		<div class="btns">
+	       			<div class="btn"><img  value="1" class="btn1 b1" src="../img/custom/custom-select/1-on.png"/></div>
+	       			<div class="btn"><img  value="2"class="btn1 b2"  src="../img/custom/custom-select/2.png"/></div>
+	       			<div class="btn" ><img value="3"class="btn1 b3"  src="../img/custom/custom-select/3.png"/></div>
+	       		</div>
+	       		<div class="more">
+	       			<h1>面料</h1>
+	       			<div class="more-content">
+	       				<div class="more-text">真丝</div>
+	       				<div class="more-text">桑波缎</div>
+	       				<div class="more-text">素绉缎</div>
+	       			</div>
+	       			<div class="more-content">
+	       				<div class="more-text">杭罗</div>
+	       				<div class="more-text">双宫绸</div>
+	       				<div class="more-text">古香缎</div>
+	       			</div>
+	       			<div class="more-content">
+	       				<div class="more-text">丝绒</div>
+	       				<div class="more-text">香云纱</div>
+	       				<div class="more-text">织锦缎</div>
+	       			</div>
+	       			<div class="more-content last-maore">
+	       				<div class="more-text">棉麻</div>
+	       				<div class="more-text">桑蚕丝</div>
+	       				<div class="more-text">柞蚕丝</div>
+	       			</div>
+	       			<div class="line"></div>
+	       			<h1>色系</h1>
+	       			<h2>红色系</h2>
+	       			<div class="more-color">
+	       				<div class="color-text color1"><h2 class="color-tit1">勃艮第酒红</h2></div>
+	       				<div class="color-text color2"><h2 class="color-tit2">锈红</h2></div>
+	       			</div>
+	       		</div>
+	       		
+	       	</div>
+	       	<div class="recom" id="re">
+	       		<div class="hr-left hr"></div>
+	       		<h1 class="tit2">效果预览</h1>
+	       		<div class="hr-right hr"></div>
+	       		<div class="help-icon"></div>
+	       		<div class="effect">
+					<div class="clo"></div>
+	       		</div>
+	       		<p>长款月牙袖</p>
+				<p>香云纱群芳紫桔梗苏绣</p>
+				<p>中式复古连襟旗袍</p>
+	       	</div>
+		<a href="custom-settle.html"><div class="cus-btn"></div></a>
+	</body>
+	<script type="text/javascript">
+		$(function(){
+			$(".btn1").click(function(){
+				var num=$(this).attr("value");
+				$(".b1").attr("src","../img/custom/custom-select/1.png");
+				$(".b2").attr("src","../img/custom/custom-select/2.png");
+				$(".b3").attr("src","../img/custom/custom-select/3.png");
+				$(this).attr("src","../img/custom/custom-select/"+num+"-on.png");
+			})
+			$(".tit-link").click(function(){
+				history.back();
+			})
+			$(".more-text").click(function(){
+				$(".more-text").css("color","#333");
+				$(this).css("color","#A31515");
+			})
+		})
+	</script>
+</html>

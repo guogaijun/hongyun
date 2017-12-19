@@ -1,0 +1,46 @@
+a,input{
+     -webkit-tap-highlight-color: transparent;
+}
+.header {
+  width: 7.5rem;
+  height: .25rem;
+  top: 0.1rem;
+  background-size: 7.27rem .24rem;
+  position: absolute;
+  z-index: 999;
+}
+.smallnav {
+  width: 7.5rem;
+  height: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  position: fixed;
+  bottom: 0;
+  background-color: #FCF5EB;
+}
+.smallnav .nav-icon {
+  width: 1rem;
+  height: 1rem;
+}
+.smallnav .icon1 {
+  background: url(../img/index/tag/home.png) center center no-repeat;
+  background-size: .43rem .7rem;
+}
+.smallnav .icon2 {
+  background: url(../img/index/tag/classify.png) center center no-repeat;
+  background-size: .43rem .7rem;
+}
+.smallnav .icon3 {
+  background: url(../img/index/tag/custom.png) center center no-repeat;
+  background-size: .43rem .7rem;
+}
+.smallnav .icon4 {
+  background: url(../img/index/tag/shopping.png) center center no-repeat;
+  background-size: .64rem .7rem;
+}
+.smallnav .icon5 {
+  background: url(../img/index/tag/my.png) center center no-repeat;
+  background-size: .43rem .7rem;
+}

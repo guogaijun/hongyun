@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>个人信息</title>
+		<link rel="stylesheet" href="../css/normalize.css" />
+		<link rel="stylesheet" href="../css/infor.css" />
+		<link rel="stylesheet" type="text/css" href="../css/top.css"/>
+		<script src="../js/auto-size.js"></script>
+		<script src="../js/jquery-3.2.1.js"></script>
+	</head>
+	<body>
+		<div class="header" id="hea"></div>
+		<div class="tit">
+	   		<div class="tit-link"></div>
+	   	</div>
+		<h1>个人信息</h1>
+		<div class="person">
+			<button></button>
+		</div>
+		<div class="info">
+			<h2>昵称</h2>
+			<div class="bind">
+				<h3>十里浅秋</h3>
+			</div>
+		</div>
+		<div class="info">
+			<h2>性别</h2>
+			<div class="bind">
+				<h3>女</h3>
+			</div>
+		</div>
+		<div class="info">
+			<h2>生日</h2>
+			<div class="bind">
+				<h3>1992.11.21</h3>
+			</div>
+		</div>
+		<div class="info">
+			<h2>电话</h2>
+			<div class="bind">
+				<h3>去绑定</h3>
+			</div>
+		</div>
+		<div class="info last-info">
+			<h2>收货地址</h2>
+			<div class="bind">
+				<h3>去绑定</h3>
+			</div>
+		</div>
+		<div class="info aside-info">
+			<div class="bind aside-bind">
+				<h3>切换账号</h3>
+			</div>
+		</div>
+	</body>
+		<script type="text/javascript">
+			$(function(){
+				$(".tit-link").click(function(){
+					history.back();
+				})
+				$(".aside-bind").click(function(){
+					window.location.assign("login-input.html");
+				})
+			})
+		</script>
+</html>

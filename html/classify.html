@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>分类</title>
+		<link rel="stylesheet" type="text/css" href="../css/classify.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/swiper.min.css">
+		<link rel="stylesheet" href="../css/top.css" />
+	    <script src="../js/jquery-3.2.1.min.js"></script>
+	    <script src="../js/swiper-3.4.2.jquery.min.js"></script>
+		<script src="../js/auto-size.js"></script>
+		<style type="text/css">
+			#icon2{
+				background-image: url(../img/index/tag/classify-on.png);
+			}
+			#class1{
+				background: #fff;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="top">
+			<!--头部-->
+		    <div class="header" id="hea"></div>
+		    <!--导航栏-->
+			<div class="nav">
+				<div class="nav-left"></div>
+				<div class="nav-input">
+					<input type="text" placeholder="搜索：香云纱">
+				</div>
+				<a href="care.html"><div class="nav-right"></div></a>
+			</div>
+		</div>
+	   	<!--侧边栏-->
+	   	<div class="side">
+	   		<div class="VIP">
+	    		<h1>十里浅秋</h1>
+	    		<button></button>
+	    	</div>
+	    	<ul>
+	    		<li><a href="#">红韵定制</a></li>
+	    		<li><a href="#">名品旗袍</a></li>
+	    		<li><a href="#">红女郎推荐</a></li>
+	    		<li><a href="#">收藏</a></li>
+	    		<li><a href="#">关于红韵</a></li>
+	    	</ul>
+	    	<div class="side-icon">
+	    		<a href="open.html"><div class="side-icon1"></div></a>
+	    		<div class="side-icon2"></div>
+	    		<div class="side-icon3"></div>
+	    	</div>
+	   	</div>
+	   	<!--主体内容-->
+		<div class="content">
+			<div class="container">
+				<div id="black"></div>
+				<div class="box-left">
+					<div id="class1" class="classmove"><a href="#">品牌</a></div>
+					<div id="class2" class="classmove"><a href="#">推荐</a></div>
+					<div id="class3" class="classmove"><a href="#">面料</a></div>
+					<div id="class4" class="classmove"><a href="#">主题</a></div>
+					<div id="class5" class="classmove"><a href="#">名品</a></div>
+					<div id="class6" class="classmove"><a href="#">搭配</a></div>
+					<div id="class7" class="classmove"><a href="#">私人售卖</a></div>
+				</div>
+				<div class="box-right">
+					<div class="right-banner"></div>
+					<div class="black">
+						<h1 id="tagname">品牌</h1>
+					</div>
+					<div class="scr-img">
+						<div><img src="../img/classify/1.png" alt="" /></div>
+						<div><img src="../img/classify/2.png" alt="" /></div>
+						<div><img src="../img/classify/3.png" alt="" /></div>
+						<div><img src="../img/classify/4.png" alt="" /></div>
+						<div><img src="../img/classify/1.png" alt="" /></div>
+						<div><img src="../img/classify/2.png" alt="" /></div>
+						<div><img src="../img/classify/3.png" alt="" /></div>
+						<div><img src="../img/classify/4.png" alt="" /></div>
+					</div>
+				</div>
+				<!--次级导航栏-->
+		       	<div class="smallnav">
+		       		<a href="../index.html"><div class="nav-icon icon1"></div></a>
+		       		<a href="classify.html"><div class="nav-icon icon2" id="icon2"></div></a>
+		       		<a href="custom-index.html"><div class="nav-icon icon3"></div></a>
+		       		<a href="cart.html"><div class="nav-icon icon4"></div></a>
+		       		<a href="mine.html"><div class="nav-icon icon5"></div></a>
+		       	</div>
+			</div>
+		</div>
+		
+	</body>
+	<script>
+		$(function(){
+			/*侧边栏*/
+			var aside=true;
+        	$(".nav-left").click(function(){
+        		if(aside){
+        			//$(".container").animate({left:"5.9rem"},800);
+	        		$(".side").animate({left:"0rem"},500);
+	        		$(".nav").animate({left:"5.9rem"},500);
+	        		$("body").css("overflow","hidden");
+	        		$(".side").css("position","fixed");
+	        		/*去掉iphone手机滑动默认行为*/
+					$("body").on('touchmove', function(e){e.preventDefault();}, false);
+	        		aside=false;
+        		}else{
+        			//$(".container").animate({left:"0rem"},800);
+	        		$(".side").animate({left:"-5.9rem"},500);
+	        		$(".nav").animate({left:"0rem"},500);
+	        		$("body").css("overflow","auto");
+	        		/*恢复iphone手机滑动默认行为*/
+					$("body").off("touchmove");
+	        		aside=true;
+        		}
+        	})
+        	
+        	$(".VIP").click(function(){
+        		window.location.assign("infor.html");
+        	})
+        	
+        	$(".container").click(function(){
+        		//$(".container").animate({left:"0rem"},800);
+        		$(".side").animate({left:"-5.9rem"},500);
+        		$(".nav").animate({left:"0rem"},500);
+        		$("body").css("overflow","auto");
+        		/*恢复iphone手机滑动默认行为*/
+				$("body").off("touchmove");
+				aside=true;
+        		
+        	})
+        	//模仿刷新
+        	$(".classmove").click(function(){
+        		$(".scr-img").css("margin-top","2rem");
+        		$(".scr-img").animate({marginTop:".2rem"},500);
+        		$(".classmove").css("background","none");
+        		$(this).css("background","#fff");
+        		$("#tagname").text($(this).text());
+        	})
+      	})
+	</script>
+</html>

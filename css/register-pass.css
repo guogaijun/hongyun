@@ -1,0 +1,108 @@
+@charset "UTF-8";
+.content {
+  width: 7.5rem;
+  height: 13.34rem;
+  background: url(../img/register/bg-password.png) center no-repeat;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+}
+
+#hea {
+  position: fixed;
+}
+
+.tit {
+  width: 7.5rem;
+  height: 1.05rem;
+  position: relative;
+}
+.tit .tit-link {
+  width: 1rem;
+  height: 1rem;
+  background: url(../img/custom/custom-index/arrow.png) center no-repeat;
+  background-size: .2rem .36rem;
+  position: absolute;
+  left: .23rem;
+  top: .45rem;
+}
+
+.password {
+  width: 5.84rem;
+  height: .8rem;
+  margin: auto;
+  margin-top: 3.49rem;
+  position: relative;
+  border-bottom: .02rem solid #a31515;
+}
+.password .line {
+  position: absolute;
+  width: .06rem;
+  height: .64rem;
+  background: url(../img/login-input/line.png) center no-repeat;
+  background-size: cover;
+}
+.password input {
+  font-family: ﻿PingFang-SC-Regular;
+  font-size: .5rem;
+  color: #a31515;
+  width: 5rem;
+  margin-left: .2rem;
+  position: absolute;
+  outline: line;
+  border: none;
+  background: none;
+}
+.password input::-webkit-input-placeholder {
+  color: #a31515;
+}
+
+.spit {
+  width: 7.5rem;
+  margin-top: .73rem;
+}
+.spit .spit-icon {
+  width: .22rem;
+  height: .22rem;
+  background: url(../img/login-input/spit.png) center no-repeat;
+  background-size: cover;
+  margin-left: .83rem;
+}
+
+.show {
+  width: 7.5rem;
+  margin-top: .59rem;
+  margin-left: .97rem;
+  position: relative;
+}
+.show .ku {
+  width: .22rem;
+  height: .22rem;
+  position: absolute;
+  background: url(../img/login-input/ku.png) center no-repeat;
+  background-size: cover;
+  left: -.3rem;
+  top: .04rem;
+}
+.show .ku img {
+  display: none;
+	width: 100%;
+	height: 100%;
+}
+.show p {
+  font-family: ﻿PingFang-SC-Regular;
+  font-size: .28rem;
+  color: #a31515;
+}
+
+.circle-right {
+  width: .9rem;
+  height: .9rem;
+  background: url(../img/login-input/circle.png) center no-repeat;
+  background-size: cover;
+  position: absolute;
+  right: .5rem;
+  top: 9rem;
+}
+
+/*# sourceMappingURL=register-pass.css.map */

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+        <title>注册</title>
+        <link rel="stylesheet" type="text/css" href="../css/register.css"/>
+        <link rel="stylesheet" type="text/css" href="../css/swiper.min.css">
+        <link rel="stylesheet" href="../css/top.css" />
+        <link rel="stylesheet" type="text/css" href="../css/normalize.css"/>
+        <link rel="stylesheet" type="text/css" href="../css/sweet-alert.css"/>
+        <script src="../js/jquery-3.2.1.min.js"></script>
+        <script src="../js/swiper-3.4.2.jquery.min.js"></script>
+        <script src="../js/auto-size.js"></script>
+        <script src="../js/sweet-alert.js"></script>
+    </head>
+    <body>
+    	<div class="content">
+            <div class="header" id="hea"></div>
+            <!--标题栏-->
+	   		<div class="tit">
+	   			<h1><a href="login-input.html"><span>登陆</span></a></h1>
+		   		<a href="login-index.html"><div class="tit-link"></div></a>
+		   	</div>
+		   	<div class="phone">
+		   		<p>手机号</p>
+		   	</div>
+		   	<div class="number">
+		   		<div class="line"></div>
+		   		<input type="text" placeholder="输入数字" id="phone">
+		   	</div>
+		   	<div class="password">
+		   		<p>验证码</p>
+		   		<div class="line"></div>
+		   		<input type="text" placeholder="输入验证码">
+		   	</div>
+		   	<div class="circle-right"></div>
+		   	<button class="time btn">60s</button>
+		   	<button class="send btn">发送验证码</button>
+    	</div>
+    </body>
+		<script type="text/javascript">
+			$(function(){
+				var isphone=false;//记录电话号码是否可用
+				//验证电话号码
+				var myreg=/^[1][1,2,3,4,5,6,7,8,9][0-9]{9}$/;
+				$("#phone").blur(function(){
+					var phone=$(this).val();
+					if (myreg.test(phone)) {
+						swal("账号可用!", "正确的账号!", "success");
+						isphone=true;
+						localStorage.setphone=phone;
+					} else{
+						sweetAlert("账号不可用", "请重新输入!", "error");
+					}
+					dark(isphone);
+				})
+				//账号验证成功时勾勾颜色加深
+				function dark(isphone){
+					if(isphone){
+						$(".circle-right").css("background-image","url(../img/register/right-dark.png)")
+						$(".send").css("display","block");
+					}
+				}
+				//点击发送验证码之后
+				$(".send").bind("click",fun=function(){
+					$(".send").css("background-image","url(../img/register/rect-dark.png)")
+					var count=60;
+					$(".send").html(count+"s");
+					clearInterval(timer);
+					var timer=setInterval(function(){
+						count--;
+						if(count>=1){
+							$(".send").html(count+"s");
+							$(".send").unbind("click",fun);
+						}else{
+							count=60;
+							$(".send").bind("click",fun);
+							clearInterval(timer);
+							$(".send").html("重新发送");
+							$(".send").css("background-image","url(../img/register/rect.png)");
+						}
+					},1000)
+				})
+				//账号可用时点击勾勾可跳转并且颜色加深
+				$(".circle-right").click(function(){
+					if(isphone){
+						window.location.assign("register-pass.html");
+					}else{
+						sweetAlert("账号不可用", "请输入可用的账号!", "error");
+					}
+				})
+			})
+		</script>
+</html>

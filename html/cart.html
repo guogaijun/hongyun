@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>购物袋</title>
+		<link rel="stylesheet" type="text/css" href="../css/cart.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/swiper.min.css">
+		<link rel="stylesheet" href="../css/top.css" />
+	    <script src="../js/jquery-3.2.1.min.js"></script>
+	    <script src="../js/swiper-3.4.2.jquery.min.js"></script>
+		<script src="../js/auto-size.js"></script>
+		<style type="text/css">
+			#icon4{
+				background-image: url(../img/index/tag/shopping-on.png);
+			}
+		</style>
+	</head>
+	<body>
+		<!--头部-->
+	    <div class="header" id="hea"></div>
+	   	<!--标题栏-->
+	   	<div class="content">
+	   		<div class="tit">
+		   		<h1>购物袋</h1>
+				<button id="set">编辑</button>
+		   	</div>
+		    <!--次级导航栏-->
+	       	<div class="smallnav">
+	       		<a href="../index.html"><div class="nav-icon icon1"></div></a>
+	       		<a href="classify.html"><div class="nav-icon icon2"></div></a>
+	       		<a href="custom-index.html"><div class="nav-icon icon3"></div></a>
+	       		<a href="cart.html"><div class="nav-icon icon4" id="icon4"></div></a>
+	       		<a href="mine.html"><div class="nav-icon icon5"></div></a>
+	       	</div>
+	       	<!--商品列表-->
+	       	<div class="swiper-container">
+	       		<div class="swiper-wrapper">
+	       			<div class="swiper-slide">
+   						<div class="list">
+				       		<div class="choose" value="0"></div>
+				       	</div>
+	       			</div>
+	       			<div class="swiper-slide" id="slide1">
+   						<img src="../img/cart/delete.png" class="delete">
+	       			</div>
+	       		</div>
+	       	</div>
+	       	<div class="swiper-container">
+	       		<div class="swiper-wrapper">
+	       			<div class="swiper-slide">
+   						<div class="list">
+				       		<div class="choose" value="0"></div>
+				       	</div>
+	       			</div>
+	       			<div class="swiper-slide" id="slide2">
+   						<img src="../img/cart/delete.png" class="delete">
+	       			</div>
+	       		</div>
+	       	</div>
+	       	<div class="swiper-container">
+	       		<div class="swiper-wrapper">
+	       			<div class="swiper-slide">
+   						<div class="list">
+				       		<div class="choose" value="0"></div>
+				       	</div>
+	       			</div>
+	       			<div class="swiper-slide" id="slide3">
+   						<img src="../img/cart/delete.png" class="delete">
+	       			</div>
+	       		</div>
+	       	</div>
+	       	<!--支付区域-->
+	       	<div class="pay">
+	       		<div class="pay-left" value="0">
+	       			<p>全选</p>
+	       		</div>
+	       		<h1>总计:<span>￥0</span></h1>
+	       		<h2>(0件)顺丰包邮</h2>
+	       		<button id="pay"></button>
+	       	</div> 	
+	   	</div>   	
+	</body>
+<script type="text/javascript">
+	$(function(){
+		var mySwiper = new Swiper ('.swiper-container', {
+        		direction: 'horizontal',
+        		slidesPerView: 'auto',
+        		spaceBetween: 0,
+        		resistanceRatio: 0,
+        		autoplayStopOnLast : true,
+        	})
+		
+		$("#pay").click(function(){
+			window.location.assign("../index.html");
+		})
+		
+		var count=0;//记录商品数量
+		/*全部选中*/
+		$(".pay-left").click(function(){
+			if($(".pay-left").attr("value")==0){
+				$(this).css("background-image","url(../img/cart/choose.png)")
+				$(".choose").css("background-image","url(../img/cart/choose.png)")
+				$(".pay-left").attr("value","1");
+				$(".choose").attr("value","1");
+				count=$(".choose").length;
+				$("span").text("￥"+count*2379);
+				$("h2").text("("+count+"件)顺丰包邮");
+			}else{
+				$(this).css("background-image","url(../img/cart/circle.png)")
+				$(".choose").css("background-image","url(../img/cart/circle.png)")
+				$(".pay-left").attr("value","0");
+				$(".choose").attr("value","0");
+				count=0;
+				$("span").text("￥"+count*2379);
+				$("h2").text("("+count+"件)顺丰包邮");
+			}
+			
+		})
+		/*单件选中*/
+		$(".choose").click(function(){
+			if($(this).attr("value")==0){
+				count++;
+				$(this).css("background-image","url(../img/cart/choose.png)")
+				$(this).attr("value","1");
+				$("span").text("￥"+count*2379);
+				$("h2").text("("+count+"件)顺丰包邮");
+			}else{
+				count--;
+				$(this).css("background-image","url(../img/cart/circle.png)")
+				$(this).attr("value","0");
+				$("span").text("￥"+count*2379);
+				$("h2").text("("+count+"件)顺丰包邮");
+				$(".pay-left").css("background-image","url(../img/cart/circle.png)");
+				$(".pay-left").attr("value","0");
+			}
+		})
+		/*点击删除*/
+		$("#slide1,#slide2,#slide3").click(function(){
+			$(this).closest(".swiper-container").remove();
+			if(count>0){
+				count--;
+			}else{
+				count=0;
+			}
+			$("span").text("￥"+count*2379);
+			$("h2").text("("+count+"件)顺丰包邮");
+		})
+		/*点击编辑时*/
+		var set=false;
+		$("#set").click(function(){
+			if(!set){
+				$(".swiper-slide").animate({right:"1.32rem"},300);
+				set=true;
+			}else{
+				$(".swiper-slide").animate({right:"0rem"},300);
+				set=false;
+			}
+		})
+	})
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

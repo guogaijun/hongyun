@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>会员等级</title>
+		<link rel="stylesheet" href="../css/normalize.css" />
+		<link rel="stylesheet" href="../css/level.css" />
+		<link rel="stylesheet" type="text/css" href="../css/top.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/swiper.min.css">
+		<script src="../js/auto-size.js"></script>
+		<script src="../js/jquery-3.2.1.js"></script>
+		<script src="../js/swiper-3.4.2.jquery.min.js"></script>
+		<style type="text/css">
+			.next1{
+				width: .2rem;
+			  	height: .3rem;
+			  	background: url(../img/level/icon2.png) center no-repeat;
+			  	background-size: cover;
+			  	position: absolute;
+			  	top: 4.15rem;
+			  	left: .65rem;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="top">
+			<div class="header" id="hea"></div>
+				<div class="tit">
+				   		<h1>会员等级</h1>
+				   		<div class="tit-link"></div>
+			   	</div>
+			<div class="person">
+				<h1>近一年消费金额</h1>
+				<p>￥ 40000</p>
+			</div>
+		</div>
+		<div class="swiper-container content">
+			<!--banner部分-->
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					<div class="more"></div>
+					<div class="next"></div>
+				</div>  
+				<div class="swiper-slide">
+					<div class="next1"></div>
+					<div class="more"></div>
+					<div class="next"></div>
+				</div>
+				<div class="swiper-slide" id="txt3">
+					<div class="more"></div>
+					<div class="next1"></div>
+				</div>
+	       </div>
+	    </div>
+		<!--<div class="content">
+			<div class="more"></div>
+			<div class="next"></div>
+		</div>-->
+	</body>
+		<script type="text/javascript">
+			$(function(){
+				var mySwiper = new Swiper ('.swiper-container', {
+	        		pagination: '.swiper-pagination',
+	        		autoplayDisableOnInteraction : false,
+	        	})
+				
+				$(".tit-link").click(function(){
+					history.back();
+				})
+			})
+		</script>
+</html>

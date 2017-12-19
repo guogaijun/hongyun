@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>定金支付</title>
+		<link rel="stylesheet" type="text/css" href="../css/custom-settle.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/swiper.min.css">
+		<link rel="stylesheet" href="../css/top.css" />
+	    <script src="../js/jquery-3.2.1.min.js"></script>
+	    <script src="../js/swiper-3.4.2.jquery.min.js"></script>
+		<script src="../js/auto-size.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			<!--头部-->
+		    <div class="header" id="hea"></div>
+		   	<div class="content">
+		   		<!--标题栏-->
+		   		<div class="tit">
+			   		<h1>定金支付</h1>
+			   		<div class="tit-link"></div>
+			   		<div class="tit-add"></div>
+			   	</div>
+			   	<div class="recom">
+		       		<div class="cycle">
+		       			<div id="more2">
+		       				<a href="collect1.html"><div class="more2-link"></div></a>
+		       			</div>
+		       			<div class="cycle-top">
+		       				<h1>[陶玉梅·百年花开]</h1>
+		       				<hr />
+		       				<p>长款月牙袖</p>
+							<p>香云纱群芳紫桔梗苏绣</p>
+							<p>中式复古连襟旗袍</p>
+		       			</div>
+		       			<div class="cycle-bottom">
+		       				<h2>估价：<span>￥2,397</span></h2>
+		       				<div class="help-icon"></div>
+		       			</div>
+		       		</div>
+		       	</div>
+			</div>
+		</div>
+		<h1>定金：<span>￥799</span></h1>
+		<p>定金位总价30%</p>
+		<div class="bottom-btns">
+			<a href="care.html"><div class="care"></div></a>
+			<a href="cart.html"><div class="shopp"></div></a>
+			<div class="add"></div>
+			<div class="payfor"></div>
+		</div>
+	</body>
+		<script type="text/javascript">
+			$(function(){
+				$(".tit-link").click(function(){
+					history.back();
+				})
+				$(".payfor").click(function(){
+					window.location.assign("../index.html");
+				})
+				var ch=false;
+				$(".tit-add").click(function(){
+					if(!ch){
+						$("#more2").css("display","block");
+						ch=true;
+					}else{
+						$("#more2").css("display","none");
+						ch=false;
+					}
+				})
+			})
+		</script>
+</html>

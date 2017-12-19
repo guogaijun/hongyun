@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>客服</title>
+		<link rel="stylesheet" href="../css/normalize.css" />
+		<link rel="stylesheet" href="../css/care.css" />
+		<link rel="stylesheet" type="text/css" href="../css/top.css"/>
+		<script src="../js/auto-size.js"></script>
+		<script src="../js/jquery-3.2.1.js"></script>
+	</head>
+	<body>
+		<div class="header" id="hea"></div>
+		<div class="tit">
+		   		<h1>小雅</h1>
+		   		<div class="tit-link"></div>
+	   	</div>
+	   	<div class="content" id="content">
+	   		<a href="detail.html"><div class="goods"></div></a>
+			<div class="care">
+				<div class="text">美好的一天从遇到您开始哦!</div>
+			</div>
+			
+			<div class="er-g"></div>
+	   	</div>
+		<div class="input">
+			<input type="text" id="ipt" placeholder="请输入回复">
+			<button id="btn">发送</button>
+		</div>
+	</body>
+		<script type="text/javascript">
+			$(function(){
+				$(".tit-link").click(function(){
+					history.back();
+				})
+				
+				$(document).on('keypress', '#ipt', function (e) { 
+					if (e.which == 13) { 
+						$('#btn').click();
+					} 
+				}); 
+				
+				var er_key = '787af310c4104a4699112483718107f3';//填写你的 API KEY 
+				$(document).on('click', '#btn', function () { 
+					var a = $('.er-g'), b = $('#ipt'), c = $('#ipt').val(), d = $('#content'); 
+					a.before('<div class="user"><div class="text">'+ c +'</div></div>');
+			        window.scrollTo(0,d.height());
+					b.val(''); 
+					$.getJSON('http://www.tuling123.com/openapi/api?key=' + er_key + '&info=' + c, function (data) { 
+						a.before('<div class="care"><div class="text">' + data.text + '</div></div>');
+			            window.scrollTo(0,d.height());
+					});
+				});			
+				
+				
+				$("#ipt").click(function(){
+					$(".input").css("bottom","1.5rem");
+				})
+				$("#ipt").blur(function(){
+					$(".input").css("bottom","0.25rem");
+				})
+				
+				
+				
+				
+				
+				
+			})
+		</script>
+</html>

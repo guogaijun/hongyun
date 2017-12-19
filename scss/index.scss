@@ -1,0 +1,301 @@
+@charset "UTF-8";
+*{
+    margin:0 auto ;
+    padding: 0;
+}
+body{
+  background: #fcf5eb;
+}
+img{
+    width:100%;
+    height: 100%;
+}
+#hea{
+    position: fixed;
+}
+.shade{
+    width: 100%;
+    height: 100%;
+    opacity: .5;
+    z-index: 2;
+    background: black;
+    position: absolute;
+    top: 0;
+}
+.content{
+    width: 7.5rem;
+    position: relative;
+    margin-top: .46rem;
+    overflow: hidden;
+}
+.container{
+    position: relative;
+}
+.top{
+    background-color: #FCF5EB;
+    position: fixed;
+    width: 7.5rem;
+    z-index: 998;
+}
+.nav{
+    width: 7.5rem;
+    height: .8rem;
+    position: absolute;
+    .nav-left{
+        position: absolute;
+        width: .8rem;
+        height: 100%;
+        background: url(../img/index/nav/menu.png)center center no-repeat;
+        background-size: .39rem .34rem;
+        left: .35rem;
+    }
+    .nav-input{
+        width: 4.2rem;
+        height: 100%;
+        background: url(../img/index/nav/search.png)center center no-repeat;
+        background-size: 4.2rem .63rem;
+        position: absolute;
+        left: 1.6rem;
+        input{
+            position: absolute;
+            width: 3.9rem;
+            height: .5rem;
+            top: .13rem;
+            left: 0.12rem;
+            font-size: .18rem;
+            opacity:0.8;
+            text-align: center;
+            border: none;
+            outline: none;
+            background: none;  
+        }
+    }
+    .nav-right{
+        position: absolute;
+        width: .8rem;
+        height: 100%;
+        background: url(../img/index/nav/message.png)center center no-repeat;
+        background-size: .47rem .42rem;
+        right: .35rem;
+    }
+}
+.banner{
+    width: 7.5rem;
+    height: 6.25rem;
+    margin-top: 1.04rem;
+    .swiper-slide{
+        width: 7.5rem;
+    }
+}
+.new{
+    width: 7.5rem;
+    height: 1.59rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: .32rem 0 .58rem 0;
+    div{
+        width: .95rem;
+        height: 1.59rem;
+    }
+}
+.new-img{
+    width: 6.5rem;
+    height: 2.12rem;
+    background: url(../img/index/new/rentangle.png)center center no-repeat;
+    background-size:cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    div{
+        width: 1.98rem;
+        height: 1.84rem;
+    }
+}
+.bigbox{
+    img{
+        width: 7.5rem;
+        
+    }
+    div{
+        margin-bottom: .25rem;
+    }
+    .big-topic{
+        height: 4.18rem;
+    }
+    .big-new{
+        height: 4rem;
+    }
+    .big-brand{
+        height: 4.18rem;
+    }
+    .big-theme{
+        height: 4.18rem;
+    }
+    .big-recommend{
+        height: 4.18rem;
+    }
+}
+.recom{
+    width: 7.5rem;
+    position: relative;
+    margin-bottom: 1rem;
+    h1{
+        font-size: .24rem;
+        color: #333;
+        text-align: center;
+        margin-bottom: .25rem;
+    }
+    .hr{
+        width: .5rem;
+        height: .01rem;
+        background: black;
+        position: absolute;
+        top: .2rem;
+        
+    }
+    .hr-left{
+        left: 2.4rem;
+    }
+    .hr-right{
+        right: 2.4rem;
+    }
+    .cycle{
+        width: 7rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-flow: wrap;
+        div{
+            width: 3.2rem;
+            height: 5.14rem;
+            margin-bottom: .45rem;
+        }
+        .cycle1{
+            background: url(../img/index/recom/1.png)center no-repeat;
+            background-size: cover;
+        }
+        .cycle2{
+            background: url(../img/index/recom/2.png)center no-repeat;
+            background-size: cover;
+        }
+        .cycle3{
+            background: url(../img/index/recom/3.png)center no-repeat;
+            background-size: cover;
+        }
+        .cycle4{
+            background: url(../img/index/recom/4.png)center no-repeat;
+            background-size: cover;
+        }
+        
+        .cycle5{
+            background: url(../img/index/recom/5.png)center no-repeat;
+            background-size: cover;
+        }
+        .cycle6{
+            background: url(../img/index/recom/6.png)center no-repeat;
+            background-size: cover;
+        }
+        .cycle7{
+            background: url(../img/index/recom/7.png)center no-repeat;
+            background-size: cover;
+        }
+        .cycle8{
+            background: url(../img/index/recom/8.png)center no-repeat;
+            background-size: cover;
+        }
+    }
+}
+/*侧边栏*/
+.side{
+    width: 5.9rem;
+    background: #FCF5EB;
+    position: absolute;
+    left: -5.9rem;
+    top: .49rem;
+    z-index: 2;
+    .VIP{
+        overflow: hidden;
+        width: 3.55rem;
+        height: 2rem;
+        background-color: #666;
+        margin: .9rem 0 .6rem .6rem;
+        background: url(../img/index/side/portrait.png).16rem .22rem no-repeat;
+        background-size:1.61rem 1.6rem;
+        h1{
+            margin-top: .7rem;
+            padding-left: 2.2rem;
+            font-size: .26rem;
+            color: #333;
+        }
+        button{
+            width: 1.22rem;
+            height: .39rem;
+            outline: none;
+            border: none;
+            background: url(../img/index/side/VIOP.png)center no-repeat;
+            background-size:cover;
+            position: absolute;
+            left: 2.7rem;
+            top: 2.05rem;
+        }
+    }
+    li{
+        margin-left: .6rem;
+        margin-bottom: .75rem;
+        list-style: none;
+    }
+    a{
+        
+        display: block;
+        margin:0;
+        width: 2rem;
+        height: .7rem;
+        text-decoration: none;
+        font-size: .32rem;
+        color: #333;
+        padding-left: .4rem;
+        line-height: .7rem;
+    }
+    .side-icon{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        div{
+            width: .8rem;
+            height: .8rem;
+        }
+        .side-icon1{           
+            background: url(../img/index/side/settlement.png)center no-repeat;
+            background-size: .56rem .47rem;         
+        }
+        .side-icon2{           
+            background: url(../img/index/side/night.png)center no-repeat;
+            background-size: .56rem .47rem;            
+        }
+        .side-icon3{           
+            background: url(../img/index/side/code.png)center no-repeat;
+            background-size: .56rem .47rem;           
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,208 @@
+* {
+  margin: 0 auto;
+  padding: 0;
+}
+
+body {
+  background: #fcf5eb;
+  width: 7.5rem;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+#hea {
+  position: fixed;
+}
+
+.content {
+  width: 7.5rem;
+  margin-top: .35rem;
+  position: absolute;
+}
+
+.tit {
+  width: 7.5rem;
+  height: 1.05rem;
+  position: relative;
+}
+.tit .tit-link {
+  width: 1rem;
+  height: 1rem;
+  background: url(../img/custom/custom-index/arrow.png) center no-repeat;
+  background-size: .2rem .36rem;
+  position: absolute;
+  left: .23rem;
+  top: .025rem;
+}
+.tit h1 {
+  font-size: .36rem;
+  color: #333;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1.05rem;
+}
+
+#re {
+  margin-bottom: 2.53rem;
+}
+
+.recom {
+  width: 6.2rem;
+  position: relative;
+  margin-top: .3rem;
+}
+.recom h1 {
+  font-size: .34rem;
+  color: #333;
+  text-align: center;
+  margin-bottom: .25rem;
+  font-weight: 200;
+}
+.recom .hr {
+  width: .32rem;
+  height: .01rem;
+  background: black;
+  position: absolute;
+  top: .26rem;
+}
+.recom .hr-left {
+  left: 1.77rem;
+}
+.recom .hr-right {
+  right: 1.77rem;
+}
+
+.cus-btn {
+  width: 7.5rem;
+  height: 2.51rem;
+  background: url(../img/custom/custom-select/confirm.png) center no-repeat;
+  background-size: cover;
+  position: fixed;
+  bottom: 0;
+}
+
+.btns {
+  width: 6.2rem;
+  height: .75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: .25rem;
+}
+.btns .div {
+  width: 1.74rem;
+  height: .75ren;
+}
+
+.more {
+  width: 6.2rem;
+  height: 8.5rem;
+  background: url(../img/custom/custom-select/back.png) center no-repeat;
+  background-size: cover;
+}
+.more h1 {
+  font-size: .3rem;
+  color: #333;
+  font-weight: 300;
+  padding: .44rem 0;
+  margin: 0;
+}
+.more .more-content {
+  width: 6.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: .7rem;
+}
+.more .more-content .more-text {
+  font-size: .28rem;
+  color: #333;
+  font-weight: 200;
+}
+.more .line {
+  width: 6.2rem;
+  height: .01rem;
+  background: url(../img/custom/custom-select/line.png) center no-repeat;
+  background-size: cover;
+}
+.more .last-maore {
+  margin-bottom: .55rem;
+}
+.more h2 {
+  font-size: .3rem;
+  color: #333;
+  font-weight: 200;
+  padding-bottom: 0.4rem;
+  padding-left: .76rem;
+  margin: 0;
+}
+.more .more-color {
+  width: 6.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: .5rem;
+}
+.more .more-color .color-text {
+  font-size: .28rem;
+  color: #333;
+  font-weight: 200;
+  height: .5rem;
+  width: 50%;
+}
+.more .more-color .color1 {
+  background: url(../img/custom/custom-select/res1.png) 1.6rem center no-repeat;
+  background-size: .5rem;
+  margin-left: .76rem;
+}
+.more .more-color .color-tit1 {
+  padding: 0;
+  text-align: left;
+  line-height: .5rem;
+}
+.more .more-color .color-tit2 {
+  line-height: .5rem;
+}
+.more .more-color .color2 {
+  background: url(../img/custom/custom-select/red2.png) 1.5rem center no-repeat;
+  background-size: .5rem;
+}
+
+.tit2 {
+  margin: .62rem 0 .44rem 0;
+}
+
+.help-icon {
+  width: .32rem;
+  height: .32rem;
+  background: url(../img/custom/custom-select/question.png) center no-repeat;
+  background-size: cover;
+  position: absolute;
+  right: 0;
+  top: -.3rem;
+}
+
+.effect {
+  width: 6.2rem;
+  height: 5.25rem;
+  background: url(../img/custom/custom-select/rotate.png) center no-repeat;
+  background-size: 3.4rem .6rem;
+  margin-bottom: .4rem;
+}
+.effect .clo {
+  width: 1.6rem;
+  height: 5.25rem;
+  background: url(../img/custom/custom-select/cloth.png) center no-repeat;
+  background-size: cover;
+}
+
+p {
+  font-size: .24rem;
+  color: #333;
+  text-align: center;
+}
+
+/*# sourceMappingURL=custom-select.css.map */

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>引导页</title>
+		<link rel="stylesheet" href="../css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="../css/top.css"/>
+		<script src="../js/auto-size.js"></script>
+		<script src="../js/jquery-3.2.1.js"></script>
+		<style type="text/css">
+			body{
+				position: relative;
+			}
+			.content{
+				width: 7.5rem;
+				height: 13.34rem;
+				background: url(../img/guide/guide3.png)center no-repeat;
+				background-size: cover;
+			}
+			button{
+				width: 1.2rem;
+				height: .45rem;
+				border: .01rem solid #333;
+				position: absolute;
+				z-index: 999;
+				right: .15rem;
+				top: .62rem;
+				color: #333;
+				font-size: .2rem;
+				outline: none;
+				border-radius: 10%;
+			}
+			button small{
+				color: #A31515;
+				font-size: .26rem;
+				line-height: .45rem;
+			}
+			#hea{
+			    position: fixed;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="header" id="hea"></div>
+		<a href="#"><div class="content"></div></a>
+		<button>跳过<small> 3s </small></button>
+	</body>
+<script type="text/javascript">
+	$(function(){
+		var ran= Math.floor(Math.random()*3+1);
+		$(".content").css("background-image",("url(../img/guide/guide"+ran+".png)"))
+		function fun(){
+			var count=3;
+			var set=setInterval(function(){
+				count--;
+				$("small").html(" "+count+"s ");
+				if(count==0){
+					window.location.assign("../index.html");
+				}
+			},1000)
+		}
+		fun();
+		$("button").click(function(){
+			window.location.assign("../index.html");
+		})
+	})
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

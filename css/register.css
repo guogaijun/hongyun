@@ -1,0 +1,137 @@
+@charset "UTF-8";
+.content {
+  width: 7.5rem;
+  height: 13.34rem;
+  background: url(../img/register/bg-register.png) center no-repeat;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+}
+
+#hea {
+  position: fixed;
+}
+
+.tit {
+  width: 7.5rem;
+  height: 1.05rem;
+  position: relative;
+}
+.tit h1 {
+  font-family: ﻿PingFang-SC-Regular;
+  font-size: .28rem;
+  margin: 0;
+  padding: 0;
+  text-align: right;
+  padding-right: .66rem;
+  padding-top: .85rem;
+}
+.tit h1 a {
+  text-decoration: none;
+  color: none;
+}
+.tit h1 span {
+  color: #a31515;
+}
+.tit .tit-link {
+  width: 1rem;
+  height: 1rem;
+  background: url(../img/custom/custom-index/arrow.png) center no-repeat;
+  background-size: .2rem .36rem;
+  position: absolute;
+  left: .23rem;
+  top: .45rem;
+}
+
+.phone {
+  width: 7.5rem;
+  margin-top: 3.56rem;
+  margin-left: .64rem;
+}
+.phone p {
+  font-family: ﻿PingFang-SC-Regular;
+  font-size: .32rem;
+  color: #a31515;
+  padding-left: .18rem;
+}
+
+.number, .password {
+  width: 5.84rem;
+  height: .8rem;
+  margin: auto;
+  margin-top: .49rem;
+  position: relative;
+  border-bottom: .02rem solid #a31515;
+}
+.number p, .password p {
+  font-family: ﻿PingFang-SC-Regular;
+  font-size: .32rem;
+  color: #a31515;
+}
+.number .line, .password .line {
+  position: absolute;
+  width: .06rem;
+  height: .64rem;
+  background: url(../img/login-input/line.png) center no-repeat;
+  background-size: cover;
+}
+.number input, .password input {
+  font-family: ﻿PingFang-SC-Regular;
+  font-size: .5rem;
+  color: #a31515;
+  width: 5rem;
+  margin-left: .2rem;
+  position: absolute;
+  outline: line;
+  border: none;
+  background: none;
+}
+.number input::-webkit-input-placeholder, .password input::-webkit-input-placeholder {
+  color: #a31515;
+}
+
+.password {
+  height: 1.5rem;
+}
+
+.circle-right {
+  width: .9rem;
+  height: .9rem;
+  background: url(../img/register/right.png) center no-repeat;
+  background-size: cover;
+  position: absolute;
+  right: .5rem;
+  top: 9rem;
+}
+
+.btn {
+  font-family: ﻿PingFang-SC-Regular;
+  color: #fcf5eb;
+  border: none;
+  outline: none;
+  display: none;
+}
+
+.time {
+  width: 1.36rem;
+  height: .50rem;
+  position: absolute;
+  right: .65rem;
+  top: 5.1rem;
+  background: url(../img/register/rect.png) center no-repeat;
+  background-size: cover;
+  font-size: .3rem;
+}
+
+.send {
+  width: 1.36rem;
+  height: .50rem;
+  position: absolute;
+  right: .65rem;
+  top: 5.5rem;
+  background: url(../img/register/rect-dark.png) center no-repeat;
+  background-size: cover;
+  font-size: .16rem;
+}
+
+/*# sourceMappingURL=register.css.map */

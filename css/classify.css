@@ -1,0 +1,228 @@
+* {
+  margin: 0 auto;
+  padding: 0;
+}
+
+body {
+  background: #fcf5eb;
+  width: 7.5rem;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+.shade {
+  width: 100%;
+  height: 100%;
+  opacity: .5;
+  z-index: 2;
+  background: black;
+  position: absolute;
+  top: 0;
+}
+
+.content {
+  width: 7.5rem;
+  position: absolute;
+  margin-top: 1.46rem;
+}
+
+.container {
+  position: relative;
+  width: 7.5rem;
+}
+
+.top {
+  background-color: #FCF5EB;
+  position: fixed;
+  width: 7.5rem;
+  z-index: 998;
+  margin-bottom: .12rem;
+  top: 0;
+}
+
+.nav {
+  width: 7.5rem;
+  height: .8rem;
+  position: absolute;
+  top: .46rem;
+}
+.nav .nav-left {
+  position: absolute;
+  width: .8rem;
+  height: 100%;
+  background: url(../img/index/nav/menu.png) center center no-repeat;
+  background-size: .39rem .34rem;
+  left: .35rem;
+}
+.nav .nav-input {
+  width: 4.2rem;
+  height: 100%;
+  background: url(../img/index/nav/search.png) center center no-repeat;
+  background-size: 4.2rem .63rem;
+  position: absolute;
+  left: 1.6rem;
+}
+.nav .nav-input input {
+  position: absolute;
+  width: 3.9rem;
+  height: .5rem;
+  top: .13rem;
+  left: 0.12rem;
+  font-size: .18rem;
+  opacity: 0.8;
+  text-align: center;
+  border: none;
+  outline: none;
+  background: none;
+}
+.nav .nav-right {
+  position: absolute;
+  width: .8rem;
+  height: 100%;
+  background: url(../img/index/nav/message.png) center center no-repeat;
+  background-size: .47rem .42rem;
+  right: .35rem;
+}
+
+.side {
+  width: 5.9rem;
+  background: #FCF5EB;
+  position: absolute;
+  left: -5.9rem;
+  top: 0rem;
+  z-index: 2;
+}
+.side .VIP {
+  overflow: hidden;
+  width: 3.55rem;
+  height: 2rem;
+  background-color: #666;
+  margin: .9rem 0 .6rem .6rem;
+  background: url(../img/index/side/portrait.png) 0.16rem 0.22rem no-repeat;
+  background-size: 1.61rem 1.6rem;
+}
+.side .VIP h1 {
+  margin-top: .7rem;
+  padding-left: 2.2rem;
+  font-size: .26rem;
+  color: #333;
+}
+.side .VIP button {
+  width: 1.22rem;
+  height: .39rem;
+  outline: none;
+  border: none;
+  background: url(../img/index/side/VIOP.png) center no-repeat;
+  background-size: cover;
+  position: absolute;
+  left: 2.7rem;
+  top: 2.05rem;
+}
+.side li {
+  margin-left: .6rem;
+  margin-bottom: .81rem;
+  list-style: none;
+}
+.side a {
+  display: block;
+  margin: 0;
+  width: 2rem;
+  height: .7rem;
+  text-decoration: none;
+  font-size: .32rem;
+  color: #333;
+  padding-left: .4rem;
+  line-height: .7rem;
+}
+.side .side-icon {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: .55rem;
+}
+.side .side-icon div {
+  width: .8rem;
+  height: .8rem;
+}
+.side .side-icon .side-icon1 {
+  background: url(../img/index/side/settlement.png) center no-repeat;
+  background-size: .56rem .47rem;
+}
+.side .side-icon .side-icon2 {
+  background: url(../img/index/side/night.png) center no-repeat;
+  background-size: .56rem .47rem;
+}
+.side .side-icon .side-icon3 {
+  background: url(../img/index/side/code.png) center no-repeat;
+  background-size: .56rem .47rem;
+}
+
+.box-left {
+  position: absolute;
+  left: 0;
+  width: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.box-left div {
+  width: 1.5rem;
+  height: 1rem;
+}
+.box-left div a {
+  display: block;
+  text-decoration: none;
+  color: #333;
+  font-size: .28rem;
+  line-height: 1rem;
+  text-align: center;
+}
+
+.box-right {
+  width: 6rem;
+  position: absolute;
+  left: 1.5rem;
+  margin-bottom: 1rem;
+}
+.box-right .right-banner {
+  width: 5.74rem;
+  height: 2rem;
+  background: url(../img/classify/banner.png) center no-repeat;
+  background-size: cover;
+}
+.box-right .black {
+  width: 5.74rem;
+  height: .8rem;
+  background: black;
+  opacity: 0.4;
+  position: absolute;
+  top: 1.2rem;
+  left: .13rem;
+}
+.box-right .black h1 {
+  color: #fff;
+  font-size: .45rem;
+  text-align: center;
+  line-height: .8rem;
+  letter-spacing: .3rem;
+}
+.box-right .scr-img {
+  width: 5.74rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: .2rem;
+}
+.box-right .scr-img div {
+  width: 2.8rem;
+  height: 4rem;
+  margin-bottom: .15rem;
+}
+
+/*# sourceMappingURL=classify.css.map */

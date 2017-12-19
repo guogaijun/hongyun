@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+        <title>登录输入</title>
+        <link rel="stylesheet" type="text/css" href="../css/login-input.css"/>
+        <link rel="stylesheet" type="text/css" href="../css/swiper.min.css">
+        <link rel="stylesheet" href="../css/top.css" />
+        <link rel="stylesheet" type="text/css" href="../css/normalize.css"/>
+        <link rel="stylesheet" type="text/css" href="../css/sweet-alert.css"/>
+        <script src="../js/jquery-3.2.1.min.js"></script>
+        <script src="../js/swiper-3.4.2.jquery.min.js"></script>
+        <script src="../js/auto-size.js"></script>
+        <script src="../js/sweet-alert.js"></script>
+    </head>
+    <body>
+    	<div class="content">
+            <div class="header" id="hea"></div>
+            <!--标题栏-->
+	   		<div class="tit">
+	   			<h1>忘记密码</h1>
+		   		<div class="tit-link"></div>
+		   	</div>
+		   	<div class="phone">
+		   		<p>手机号</p>
+		   	</div>
+		   	<div class="number">
+		   		<div class="line"></div>
+		   		<input type="text" placeholder="输入数字" id="phone">
+		   	</div>
+		   	<div class="password">
+		   		<p>密码</p>
+		   		<div class="line"></div>
+		   		<input type="password" placeholder="输入密码" id="pass">
+		   	</div>
+		   		
+		   	<div class="show">
+		   		<div class="ku">
+		   			<img src="../img/login-input/gou.png"/>
+		   		</div>
+		   		<p>显示密码</p>
+		   	</div>
+		   	<div class="circle-right"></div>
+    	</div>
+    </body>
+		<script type="text/javascript">
+			$(function(){
+				//进来时先获取已经注册的账号密码
+				$("#phone").val(localStorage.setphone);
+				$("#pass").val(localStorage.setpass);
+				if($("#phone").val!=""&&$("#pass").val!=""){
+					$(".circle-right").click(function(){
+						window.location.assign("../index.html");
+					})
+				}
+
+				$(".tit-link").click(function(){
+					history.back();
+				})
+				//显示隐藏密码按钮
+				var bu=true;
+				$(".ku").click(function(){
+					if(bu){
+						$(".ku img").css("display","block");
+						$("#pass").attr("type","text");
+						bu=false;
+					}else{
+						$(".ku img").css("display","none");
+						$("#pass").attr("type","password");
+						bu=true;
+					}
+					
+				})
+				
+				
+				
+				var isphone=false;//记录电话号码是否正确
+				var ispass=false;//记录密码是否正确
+				//验证电话号码
+				var myreg=/^[1][1,2,3,4,5,6,7,8,9][0-9]{9}$/;
+				$("#phone").blur(function(){
+					var phone=$(this).val();
+					if (myreg.test(phone)) {
+						swal("账号正确!", "正确的账号!", "success");
+						isphone=true;
+					} else{
+						sweetAlert("账号错误!", "请重新输入!", "error");
+					}
+					dark(isphone,ispass);
+				})
+				//验证登录密码
+				var aa=new RegExp("(?![a-z]+$|[0-9]+$)^[a-zA-Z0-9]{6}$");
+				$("#pass").blur(function(){
+					var pass=$(this).val();
+					if (aa.test(pass)) {
+						swal("密码正确!", "正确的密码!", "success");
+						ispass=true;
+					} else{
+						sweetAlert("密码错误!", "请输入6位由数字和字母组成的密码!", "error");
+					}
+					dark(isphone,ispass);
+				})
+				//账号密码都验证成功时勾勾颜色加深
+				function dark(isphone,ispass){
+					if(isphone&&ispass){
+						$(".circle-right").css("background-image","url(../img/login-input/circle2.png)")
+					}
+				}
+				//账号密码都验证成功时点击勾勾可跳转并且颜色加深
+				$(".circle-right").click(function(){
+					if(isphone&&ispass){
+						window.location.assign("../index.html");
+					}else{
+						sweetAlert("账号或密码错误", "请输入正确的账号和密码!", "error");
+					}
+				})
+				
+			})
+		</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,82 @@
+.content {
+  width: 7.5rem;
+  height: 13.34rem;
+  background: url(../img/login-index/bg.png) center no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+#hea {
+  position: fixed;
+}
+
+.tit {
+  width: 7.5rem;
+  height: 1.05rem;
+  position: relative;
+}
+.tit .tit-link {
+  width: 1rem;
+  height: 1rem;
+  background: url(../img/custom/custom-index/arrow.png) center no-repeat;
+  background-size: .2rem .36rem;
+  position: absolute;
+  left: .23rem;
+  top: .45rem;
+}
+
+.wel {
+  width: 4.12rem;
+  height: 2.26rem;
+  background: url(../img/login-index/welcome.png) center no-repeat;
+  background-size: cover;
+  margin: 1.52rem 0 1.22rem .66rem;
+}
+
+.login {
+  width: 6.2rem;
+  height: 1rem;
+  background: url(../img/login-index/login.png) center no-repeat;
+  background-size: cover;
+  margin: 0 auto;
+  margin-bottom: .6rem;
+}
+
+.register {
+  width: 6.2rem;
+  height: 1rem;
+  background: url(../img/login-index/register.png) center no-repeat;
+  background-size: cover;
+  margin: 0 auto;
+  margin-bottom: 2.32rem;
+}
+
+.aside {
+  width: 6.5rem;
+  height: .31rem;
+  background: url(../img/login-index/login2.png) center no-repeat;
+  background-size: cover;
+  margin: 0 auto;
+}
+
+.wei {
+  width: .75rem;
+  height: .75rem;
+  position: absolute;
+  background: url(../img/login-index/wei.png) center no-repeat;
+  background-size: cover;
+  left: 2.59rem;
+  top: 11.77rem;
+}
+
+.qq {
+  width: .75rem;
+  height: .75rem;
+  position: absolute;
+  background: url(../img/login-index/qq.png) center no-repeat;
+  background-size: cover;
+  left: 4.17rem;
+  top: 11.77rem;
+}
+
+/*# sourceMappingURL=login-index.css.map */
